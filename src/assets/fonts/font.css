@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('./Roboto-Light.eot');
+  src: url('./Roboto-Light.eot?#iefix') format('embedded-opentype'),
+       url('./Roboto-Light.svg#Roboto-Light') format('svg'),
+       url('./Roboto-Light.ttf') format('truetype'),
+       url('./Roboto-Light.woff') format('woff'),
+       url('./Roboto-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./Roboto-Regular.eot');
+  src: url('./Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./Roboto-Regular.svg#Roboto-Regular') format('svg'),
+       url('./Roboto-Regular.ttf') format('truetype'),
+       url('./Roboto-Regular.woff') format('woff'),
+       url('./Roboto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JosefinSans-Regular';
+  src: url('./JosefinSans-Regular.eot');
+  src: url('./JosefinSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./JosefinSans-Regular.svg#JosefinSans-Regular') format('svg'),
+       url('./JosefinSans-Regular.ttf') format('truetype'),
+       url('./JosefinSans-Regular.woff') format('woff'),
+       url('./JosefinSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('./Montserrat-SemiBold.eot');
+  src: url('./Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('./Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg'),
+       url('./Montserrat-SemiBold.ttf') format('truetype'),
+       url('./Montserrat-SemiBold.woff') format('woff'),
+       url('./Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JosefinSans-Bold';
+  src: url('./JosefinSans-Bold.eot');
+  src: url('./JosefinSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('./JosefinSans-Bold.svg#JosefinSans-Bold') format('svg'),
+       url('./JosefinSans-Bold.ttf') format('truetype'),
+       url('./JosefinSans-Bold.woff') format('woff'),
+       url('./JosefinSans-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
