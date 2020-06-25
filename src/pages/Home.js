@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Social from '../components/Social';
+import Carousel from '../components/Carousel';
 
 
 function Home(props) {
@@ -12,6 +13,7 @@ function Home(props) {
           <Social />
         </div>
       </Subheader>
+      <Carousel />
     </>
   );
 }
