@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Social from '../components/Social';
 import Carousel from '../components/Carousel';
+import Partition from '../components/Partition';
+import MainContainer from '../components/MainContainer';
+import GoodsSlider from '../components/GoodsSlider';
 
 
 function Home(props) {
@@ -14,6 +17,10 @@ function Home(props) {
         </div>
       </Subheader>
       <Carousel />
+      <MainContainer>
+        <Partition title="Clothes" link="clothes"/>
+        <GoodsSlider category="clothes"/>
+      </MainContainer>
     </>
   );
 }

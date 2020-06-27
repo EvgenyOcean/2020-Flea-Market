@@ -110,7 +110,7 @@ export const data = {
       quantity: 2,
       in_cart: false,
       best: true
-    }
+    },
   ]
 }
 
