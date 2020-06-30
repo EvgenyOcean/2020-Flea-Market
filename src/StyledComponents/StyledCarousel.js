@@ -4,8 +4,9 @@ import styled from 'styled-components';
 const StyledCarouselDiv = styled.div`
   width: 100%;
   max-width: 1200px; 
-  padding: 2rem 1rem; 
+  padding: 0 1rem; 
   margin: 0 auto;
+  margin-top: 2rem;
 
   .slider{
     overflow: hidden;
@@ -14,7 +15,7 @@ const StyledCarouselDiv = styled.div`
 
   .slides{
     position: relative; 
-    height: 300px; 
+    height: 250px; 
   }
 
   .slide{

@@ -17,7 +17,7 @@ class DataContextProvider extends Component {
     this.setState({sellers:data.sellers, items:data.items, loading: false});
   }
 
-  render() {
+  render(){
     return (
       <DataContext.Provider value={{...this.state}}>
         {this.props.children}

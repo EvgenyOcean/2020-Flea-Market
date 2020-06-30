@@ -78,6 +78,20 @@ export const data = {
       verified: true,
       get items(){return data.items.filter(item => item._seller === this.username)}
     },
+    {
+      username: "Dustin", 
+      phone: "+1" + Math.floor(Math.random() * 10000000000),
+      get email(){return this.username.toLowerCase() + Math.floor(Math.random() * 1000) + '@gmail.com'},
+      verified: true,
+      get items(){return data.items.filter(item => item._seller === this.username)}
+    },
+    {
+      username: "Petter", 
+      phone: "+1" + Math.floor(Math.random() * 10000000000),
+      get email(){return this.username.toLowerCase() + Math.floor(Math.random() * 1000) + '@gmail.com'},
+      verified: true,
+      get items(){return data.items.filter(item => item._seller === this.username)}
+    },
   ], 
 
   items: [
@@ -86,7 +100,7 @@ export const data = {
       path: "basketballShirt", 
       name: "Pro Cop Shrit",
       description: "Good quality. Brand new, selling it only because the color doesn't go with my green eyes.",
-      price: "40$",
+      price: "40",
       quality: "Good", 
       size: "XL", 
       _seller: "Jessica", 
@@ -101,7 +115,7 @@ export const data = {
       path: "blackShirt", 
       name: "Solid Black Shirt",
       description: "Good quality. Brand new, selling it only because the color doesn't go with my green eyes.",
-      price: "35$",
+      price: "35",
       quality: "Good", 
       size: "XL", 
       _seller: "Jessica", 
@@ -110,6 +124,66 @@ export const data = {
       quantity: 2,
       in_cart: false,
       best: true
+    },
+    {
+      category: "services",
+      path: "plumbvingServices", 
+      name: "Plumbing Services",
+      description: "Maximum experienced plumber, I'll fix everything you need and even more.",
+      price: "50",
+      quality: "Good", 
+      size: null, 
+      _seller: "Dustin", 
+      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get imgs(){return loaded_imgs[this.category]},
+      quantity: null,
+      in_cart: false,
+      best: false
+    },
+    {
+      category: "services",
+      path: "gardenerServices", 
+      name: "Gardeners Services",
+      description: "Well, I started out as a hobbyist gardener now I have 32+ years experience, so if you some kind of a garden to take care with, I'm at your services.",
+      price: "60",
+      quality: "Good", 
+      size: null, 
+      _seller: "Dustin", 
+      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get imgs(){return loaded_imgs[this.category]},
+      quantity: null,
+      in_cart: false,
+      best: false
+    },
+    {
+      category: "animals",
+      path: "parrot", 
+      name: "Kesha",
+      description: "Pretty young parrot. He's super lovely and requires constant attention.",
+      price: "30",
+      quality: null, 
+      size: null, 
+      _seller: "Petter", 
+      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get imgs(){return loaded_imgs[this.path]},
+      quantity: 15,
+      in_cart: false,
+      best: false
+    },
+    {
+      category: "animals",
+      path: "snake", 
+      name: "Pythonick",
+      description: "Pretty young snake. It's super lovely and peaceful, plus totally harmless.",
+      price: "150",
+      quality: null, 
+      size: null, 
+      _seller: "Petter", 
+      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get imgs(){return loaded_imgs[this.path]},
+      quantity: 3,
+      in_cart: false,
+      best: false
     },
   ]
 }

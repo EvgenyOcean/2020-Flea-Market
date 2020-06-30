@@ -13,10 +13,12 @@ function Partition({title, link}) {
 
 const PartitionDiv = styled.div`
   background-color: var(--mainGreen);
-  padding: 0.2rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
+  margin: 2rem 0;
 
   a{
     font-family: sans-serif;

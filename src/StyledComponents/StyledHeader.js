@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const StyledHeader = styled.header`
-  padding: 1rem 0;
+  padding: 0.4rem 0;
   background-color: var(--mainBlack);
 
   a{
@@ -32,15 +32,15 @@ const StyledHeader = styled.header`
 
   .logo-img{
     vertical-align: bottom;
-    width: 70px;
-    height: 69px;
+    width: 48px;
+    height: 48px;
     margin-right: 1rem;
   }
 
   .logo-text{
     display: none;
     font-family: 'JosefinSans-Bold', sans-serif;
-    font-size: 2.25rem; 
+    font-size: 1.5rem; 
     text-transform: capitalize;
   }
 
@@ -49,22 +49,22 @@ const StyledHeader = styled.header`
     flex-grow: 1;
     display: flex;
     order: 3;
-    margin-top: 1rem;
+    margin-top: 0.1rem;
   }
 
   .search-button{
     background-color: #F0F0F0;
     color: #4D4D4D;
     font-family: "Roboto-Regular", sans-serif; 
-    font-size: 1.5rem; 
     border: none; 
-    height: 59px;
+    height: 40px;
     vertical-align: bottom;
     cursor: pointer;
-    padding: 0.5em 1em; 
+    padding: 0.5em 1.5em; 
 
     svg{
       color: red;
+      font-size: 1rem;
     }
   }
 
@@ -72,9 +72,9 @@ const StyledHeader = styled.header`
     width: 100%;
     background-color: transparent; 
     border: #F0F0F0 solid 1px;
-    height: 59px;
+    height: 40px;
     border-radius: 10px 0px 0px 10px;
-    font-size: 1.5rem; 
+    font-size: 1rem; 
     color: red;
     padding: 0 1rem;
   }
@@ -86,8 +86,8 @@ const StyledHeader = styled.header`
 
   .cart-img{
     vertical-align: bottom;
-    width: 58px;
-    height: 59px;
+    width: 40px;
+    height: 40px;
     margin-right: 1rem;
   }
 

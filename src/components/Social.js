@@ -16,7 +16,7 @@ function Social(props) {
 
 const SocialDiv = styled.div`
   display: flex; 
-  max-width: 200px; 
+  max-width: 150px; 
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -26,17 +26,23 @@ const SocialDiv = styled.div`
     color: white;
     background-color: #45668E;
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     position: relative;
   }
+
+  // .vk svg{
+  //   width: 20px;
+  //   height: 20px;
+  //   vertical-align: bottom;
+  // }
 
   .fb{
     background-color: #3B5998;
 
     svg{
-      width: 25px;
-      height: 25px;
+      width: 15px;
+      height: 15px;
     }
   }
 
@@ -44,8 +50,8 @@ const SocialDiv = styled.div`
     background: linear-gradient(0deg, #FFD879 4.79%, #FCCB76 11.31%, #F5AA6C 23.28%, #E9755E 39.24%, #E45F58 45.13%, #D22A9C 71.43%, #6968DF 108.26%);
 
     svg{
-      width: 25px;
-      height: 25px;
+      width: 15px;
+      height: 15px;
     }
   }
 
@@ -53,8 +59,8 @@ const SocialDiv = styled.div`
     background-color: #4AAEE8;
 
     svg{
-      width: 25px;
-      height: 25px;
+      width: 15px;
+      height: 15px;
     }
   }
 
@@ -68,8 +74,8 @@ const SocialDiv = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     vertical-align: bottom;
   }
 

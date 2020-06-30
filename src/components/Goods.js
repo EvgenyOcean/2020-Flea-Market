@@ -1,15 +1,18 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-function Goods({name, image, clName=""}) {
+function Goods({name, image, path, clName=""}) {
   return (
     <GoodsDiv className={clName}>
-      <div className="image-container">
-        <img src={image} alt={name}/>
-      </div>
-      <div className="name-container">
-        <div className="name">{name}</div>
-      </div>
+      <Link to={'/item/' + path}>      
+        <div className="image-container">
+          <img src={image} alt={name}/>
+        </div>
+        <div className="name-container">
+          <div className="name">{name}</div>
+        </div>
+      </Link>
     </GoodsDiv>
   );
 }
@@ -33,6 +36,7 @@ const GoodsDiv = styled.div`
     text-align: center;
     color: var(--mainGrey);
     font-family: Roboto-Regular, sans-serif;
+    padding: 0.5rem 0rem;
   }
 `
 

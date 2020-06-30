@@ -56,7 +56,6 @@ class Carousel extends React.Component{
 
     if (this.state.preventFirstAnimation){ // there's no animateRight or Left classes, so animation won't be played BUT Because in the html image which comes first will end up the last because of the position: absolute and others just stack on it, we need to increase zindex of the first image right away, that's why style has been added: 
       return best_offers.map((item, index) => (
-        // 
         <Link to={'item/' + item.path} key={item.path}>
           <img src={item.imgs[0]} className='slide' alt="" 
             style={index === count ? {zIndex:this.state.zInd} : {zIndex:this.state.zInd - 1}}>
