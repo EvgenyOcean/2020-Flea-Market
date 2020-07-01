@@ -20,12 +20,12 @@ function Goods({name, image, path, clName=""}) {
 const GoodsDiv = styled.div`
   .image-container{
     width: 290px;
-    padding: 1rem 0.5rem; 
+    padding: 0.5rem 0.5rem; 
     background-color: white;
 
     img{
       width: 270px;
-      height: 270px;
+      height: 250px;
     }
   }
 

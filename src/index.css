@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-html, body, #root, main{
+html, body, #root{
   height: 100%;
 }
 
@@ -10,6 +10,7 @@ html, body, #root, main{
   --mainBlack: #010101; 
   --mainGreen: #51A3A3;
   --mainGrey: #f0f0f0;
+  --darkGrey: #4a4a4a;
 }
 
 body{
@@ -25,6 +26,26 @@ h3{
 }
 
 main{
+  height: calc(100% - 68px);
   display: flex;
   flex-direction: column;
+}
+
+.empty{
+  margin-top: 2rem;
+  height: calc(100% - 63px - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+img{
+  vertical-align: bottom;
+}
+
+@media (max-width: 992px){
+  .empty{
+    height: calc(100% - 106px - 2rem);
+  }
 }

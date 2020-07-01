@@ -10,6 +10,7 @@ class GoodsSlider extends React.Component{
     super(props);
     this.state = {
       category: props.category,
+      seller: props.seller,
       loading: true, 
       items: [],
       params: {
@@ -19,7 +20,8 @@ class GoodsSlider extends React.Component{
         spaceBetween: 10,
       }
     }
-    this.filteringImgs = this.filteringImgs.bind(this);
+    this.categoryFiltering = this.categoryFiltering.bind(this);
+    this.sellerFiltering = this.sellerFiltering.bind(this);
   }
 
   static contextType = DataContext;
@@ -36,10 +38,18 @@ class GoodsSlider extends React.Component{
     this.setState({loading, items});
   }
 
-  filteringImgs(){
+  categoryFiltering(){
     let allImgs = this.state.items; 
     let category = this.state.category
     let filteredImgs = allImgs.filter(img => img.category === category); 
+    filteredImgs = filteredImgs.map(img => <Goods name={img.name} image={img.imgs[1]} clName="swiper-slide" path={img.path} key={img.path}/>)
+    return filteredImgs;
+  }
+
+  sellerFiltering(){
+    let allImgs = this.state.items; 
+    let seller = this.state.seller
+    let filteredImgs = allImgs.filter(img => img.seller === seller); 
     filteredImgs = filteredImgs.map(img => <Goods name={img.name} image={img.imgs[1]} clName="swiper-slide" path={img.path} key={img.path}/>)
     return filteredImgs;
   }
@@ -50,7 +60,7 @@ class GoodsSlider extends React.Component{
       this.state.loading ? <h1>The page is loading</h1> : 
       <GoodsSliderDiv>
         <Swiper {...this.state.params}>
-          {this.filteringImgs()}
+          {this.state.category ? this.categoryFiltering() : this.sellerFiltering()}
         </Swiper>
       </GoodsSliderDiv>
     )

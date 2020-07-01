@@ -1,5 +1,6 @@
 import logo from './assets/svgs/logo.svg';
 import cart from './assets/svgs/cart.svg';
+import surfing from './assets/svgs/surfing.svg';
 import basketballShirt_1200 from './assets/images/1200/basketballShirt.jpg';
 import blackShirt_1200 from './assets/images/1200/blackShirt.jpg';
 import clock_1200 from './assets/images/1200/clock.jpg';
@@ -76,21 +77,21 @@ export const data = {
       phone: "+1" + Math.floor(Math.random() * 10000000000),
       get email(){return this.username.toLowerCase() + Math.floor(Math.random() * 1000) + '@gmail.com'},
       verified: true,
-      get items(){return data.items.filter(item => item._seller === this.username)}
+      // get items(){return data.items.filter(item => item._seller === this.username)}
     },
     {
       username: "Dustin", 
       phone: "+1" + Math.floor(Math.random() * 10000000000),
       get email(){return this.username.toLowerCase() + Math.floor(Math.random() * 1000) + '@gmail.com'},
       verified: true,
-      get items(){return data.items.filter(item => item._seller === this.username)}
+      // get items(){return data.items.filter(item => item._seller === this.username)}
     },
     {
       username: "Petter", 
       phone: "+1" + Math.floor(Math.random() * 10000000000),
       get email(){return this.username.toLowerCase() + Math.floor(Math.random() * 1000) + '@gmail.com'},
       verified: true,
-      get items(){return data.items.filter(item => item._seller === this.username)}
+      // get items(){return data.items.filter(item => item._seller === this.username)}
     },
   ], 
 
@@ -104,10 +105,10 @@ export const data = {
       quality: "Good", 
       size: "XL", 
       _seller: "Jessica", 
-      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get seller(){return data.sellers.find(seller => seller.username === this._seller)},
       get imgs(){return loaded_imgs[this.path]},
       quantity: 2,
-      in_cart: false,
+      inCart: false,
       best: true
     },
     {
@@ -119,10 +120,10 @@ export const data = {
       quality: "Good", 
       size: "XL", 
       _seller: "Jessica", 
-      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get seller(){return data.sellers.find(seller => seller.username === this._seller)},
       get imgs(){return loaded_imgs[this.path]},
       quantity: 2,
-      in_cart: false,
+      inCart: false,
       best: true
     },
     {
@@ -134,10 +135,10 @@ export const data = {
       quality: "Good", 
       size: null, 
       _seller: "Dustin", 
-      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get seller(){return data.sellers.find(seller => seller.username === this._seller)},
       get imgs(){return loaded_imgs[this.category]},
       quantity: null,
-      in_cart: false,
+      inCart: false,
       best: false
     },
     {
@@ -149,10 +150,10 @@ export const data = {
       quality: "Good", 
       size: null, 
       _seller: "Dustin", 
-      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get seller(){return data.sellers.find(seller => seller.username === this._seller)},
       get imgs(){return loaded_imgs[this.category]},
       quantity: null,
-      in_cart: false,
+      inCart: false,
       best: false
     },
     {
@@ -164,10 +165,10 @@ export const data = {
       quality: null, 
       size: null, 
       _seller: "Petter", 
-      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get seller(){return data.sellers.find(seller => seller.username === this._seller)},
       get imgs(){return loaded_imgs[this.path]},
       quantity: 15,
-      in_cart: false,
+      inCart: false,
       best: false
     },
     {
@@ -179,13 +180,13 @@ export const data = {
       quality: null, 
       size: null, 
       _seller: "Petter", 
-      get seller(){return data.sellers.find(seller => seller.name === this._seller)},
+      get seller(){return data.sellers.find(seller => seller.username === this._seller)},
       get imgs(){return loaded_imgs[this.path]},
       quantity: 3,
-      in_cart: false,
+      inCart: true,
       best: false
     },
   ]
 }
 
-export {logo, cart};
+export {logo, cart, surfing};
