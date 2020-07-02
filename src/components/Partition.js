@@ -2,11 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-function Partition({title, link}) {
+function Partition({title, link=null}) {
   return (
     <PartitionDiv>
       <h3>{title}</h3>
-      <Link to='/item/link'>See more</Link>
+      {link && <Link to='/item/link'>See more</Link>}
     </PartitionDiv>
   );
 }

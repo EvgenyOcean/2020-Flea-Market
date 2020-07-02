@@ -13,6 +13,7 @@ class DataContextProvider extends Component {
       loading: true,
     }
     this.handleClick = this.handleClick.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
   // function to change items.inCart state 
@@ -21,10 +22,26 @@ class DataContextProvider extends Component {
     if (target.classList.contains('btn-add')){
       let inCartItems = this.state.inCartItems.concat(item);
       item.inCart = true;
-      this.setState({inCartItems}, () => {console.log(this.state.inCartItems)});
+      this.setState({inCartItems});
     } else {
       let inCartItems = this.state.inCartItems.filter(inCartItem => inCartItem !== item);
       item.inCart = false;
+      this.setState({inCartItems});
+    }
+  }
+
+  handleRemove(removeItem, e){
+    let target = e.target;
+    let inCartItems = this.state.inCartItems;
+    if (target.classList.contains('clear')){
+      for (let item of inCartItems){
+        item.inCart = false; 
+      }
+      inCartItems = [];
+      this.setState({inCartItems});
+    } else {
+      removeItem.inCart = false; 
+      inCartItems = inCartItems.filter(item => item !== removeItem);
       this.setState({inCartItems});
     }
   }
@@ -36,7 +53,7 @@ class DataContextProvider extends Component {
 
   render(){
     return (
-      <DataContext.Provider value={{...this.state, handleClick:this.handleClick}}>
+      <DataContext.Provider value={{...this.state, handleClick:this.handleClick, handleRemove:this.handleRemove}}>
         {this.props.children}
       </DataContext.Provider>
     );
