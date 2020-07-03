@@ -18,11 +18,13 @@ class Cart extends React.Component{
   }
 
   static contextType = DataContext;
+
   componentDidMount(){
+    window.scrollTo(0,0);
     const {loading, inCartItems, handleRemove} = this.context;
     this.handleRemove = handleRemove;
     if (loading) return; 
-    let extraInfo = new WeakMap();
+    let extraInfo = new Map();
     for (let item of inCartItems){
       extraInfo.set(item, {
         requestAmount: 1, 
@@ -36,14 +38,20 @@ class Cart extends React.Component{
     const {loading, inCartItems, handleRemove} = this.context;
     if (inCartItems === this.state.inCartItems) return;
     this.handleRemove = handleRemove;
-    let extraInfo = new WeakMap();
+    let oldExtraInfo = this.state.extraInfo;
+    let extraInfo = new Map();
     for (let item of inCartItems){
-      extraInfo.set(item, {
-        requestAmount: 1, 
-        get total(){return +item.price * this.requestAmount}
-      })
+      if (oldExtraInfo.has(item)){
+        extraInfo.set(item, oldExtraInfo.get(item));
+      } else {
+        extraInfo.set(item, {
+          requestAmount: 1, 
+          get total(){return +item.price * this.requestAmount}
+        })
+      }
     }
     this.setState({loading, inCartItems, extraInfo});
+
   }
 
   handleQuantityChange(item, e){
@@ -67,13 +75,17 @@ class Cart extends React.Component{
     if (!items.length){
       content = (
         <div className="empty">
-          <div className="empty-text">Your cart is currently empty.<br/>Go ahead and surf the market!</div>
+          <div className="empty-text">
+            <h3>Your cart is currently empty.<br/>Go ahead and surf the market!</h3>
+          </div>
           <div className="empty-img">
             <img src={surfing} alt="surfing"/>
           </div>
         </div>
       )
     } else {
+      const subtotal = items.reduce((prev, current)=> prev + extraInfo.get(current).total ,0);
+      console.log(extraInfo);
       content = (
         <CartDiv>
           <table>
@@ -97,9 +109,9 @@ class Cart extends React.Component{
           </div>
           <div className="payment">
             <ul>
-              <li>Subtotal: {5}</li>
-              <li>Tax: {5}</li>
-              <li>Total: {5}</li>
+              <li>Subtotal: {subtotal}$</li>
+              <li>Tax: {subtotal / 100 * 10}$</li>
+              <li>Total: {subtotal + (subtotal / 100 * 10)}$</li>
             </ul>
             <button className="btn pay" type="button">Pay with Paypal</button>
           </div>

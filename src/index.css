@@ -40,6 +40,16 @@ main{
   align-items: center;
 }
 
+.empty h3{
+  color: #4a4a4a; 
+  text-align: center;
+}
+
+.empty img{
+  max-width: 668px;
+  width: 100%;
+}
+
 img{
   vertical-align: bottom;
 }

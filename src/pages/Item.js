@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import styled from 'styled-components';
 import Partition from '../components/Partition';
 import GoodsSlider from '../components/GoodsSlider';
@@ -7,10 +7,9 @@ import {DataContext} from '../Context';
 function Item(props) {
   let path = props.match.params.path;
 
-  // check the path by returning the item
+  useEffect(()=>{window.scrollTo(0,0)}, [path]);
 
   //1. Gotta make sure the data has been loaded from a server
-  //+++ add the function to change the .inCart
   let {items, loading, handleClick} = useContext(DataContext); 
   if (loading){
     return (<h1>The data is coming</h1>)
@@ -35,8 +34,8 @@ function Item(props) {
               <li className="ul-header">ITEM INFO</li>
               <li>Name: {theItem.name}</li>
               <li>Price: {theItem.price + '$'}</li>
-              <li>Quality: {theItem.quality}</li>
-              <li>Size: {theItem.size}</li>
+              {theItem.quality && <li>Quality: {theItem.quality}</li>}
+              {theItem.size && <li>Quality: {theItem.size}</li>}
             </ul>
             <ul className="seller-info">
               <li className="ul-header">SELLER INFO</li>

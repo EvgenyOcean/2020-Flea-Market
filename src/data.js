@@ -108,7 +108,7 @@ export const data = {
       get seller(){return data.sellers.find(seller => seller.username === this._seller)},
       get imgs(){return loaded_imgs[this.path]},
       quantity: 2,
-      inCart: true,
+      inCart: false,
       best: true
     },
     {
@@ -183,7 +183,7 @@ export const data = {
       get seller(){return data.sellers.find(seller => seller.username === this._seller)},
       get imgs(){return loaded_imgs[this.path]},
       quantity: 3,
-      inCart: true,
+      inCart: false,
       best: false
     },
   ]
