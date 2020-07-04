@@ -23,7 +23,7 @@ function Footer(props) {
           <IFrame src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d786.0533398882925!2d-87.8296928398329!3d41.941390650910904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2sru!4v1593524078890!5m2!1sen!2sru" width={600} height={200} title="Chicago, IL"/>
         </div>
       </div>
-      <div className="copyright">All rights reserved (c) 2020</div>
+      <div className="copyright">All rights reserved &copy; 2020</div>
     </FooterDiv>
   );
 }

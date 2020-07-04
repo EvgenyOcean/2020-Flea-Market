@@ -18,6 +18,10 @@ class GoodsSlider extends React.Component{
         slidesPerView: 'auto',
         slidesPerGroup: 4,
         spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
       }
     }
     this.categoryFiltering = this.categoryFiltering.bind(this);
@@ -75,6 +79,13 @@ const GoodsSliderDiv = styled.div`
     width: 290px;
     object-fit: cover;
     height: 100%;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after{
+    color: white;
+    padding: 1rem;
+    background: red;
   }
 `
 

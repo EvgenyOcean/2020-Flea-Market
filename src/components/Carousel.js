@@ -66,11 +66,22 @@ class Carousel extends React.Component{
     }
     
     // all other cases, with the animation classNames and zIndex 
+    // down below you can find some fun stuff with ternary operator, basically it just makes sure that images have the right zindexes. The formula - current: x; prev: x - 1; others: x - 2
+    // but it's not that easy, cuz you might be on the first image, but the prev img was the last one, due to the loop. And that's why it got a little bit messy.
     return best_offers.map((item, index) => (
       <Link to={'item/' + item.path} key={item.path}>
         <img src={item.imgs[0]} 
              className={index === count ? finalClasses : 'slide'} alt="" 
-             style={index === count ? {zIndex:this.state.zInd} : {zIndex:this.state.zInd - 1}}>
+             style={
+               index === count ? {zIndex:this.state.zInd} : 
+               (animateTo === 'animateRight') ? 
+                  (count === 0) ? 
+                    ((index === best_offers.length - 1) ? {zIndex: this.state.zInd-1} : {zIndex: this.state.zInd-2}) :
+                    ((index === count - 1) ? {zIndex: this.state.zInd-1} : {zIndex: this.state.zInd-2}) : 
+                  (count === best_offers.length - 1) ? 
+                    ((index === 0) ? {zIndex: this.state.zInd-1} : {zIndex: this.state.zInd-2}) :
+                    ((index === count + 1) ? {zIndex: this.state.zInd-1} : {zIndex: this.state.zInd-2})
+             }>
         </img>
       </Link>)
     )
@@ -101,6 +112,7 @@ class Carousel extends React.Component{
             {this.createImgs()}
           </div>
           <button className='btn btn-left' onClick={this.handleClick} id="left"><FaAngleLeft/></button>
+          <div className="text">Offers of the day</div>
         </div>
       </StyledCarouselDiv>
     )

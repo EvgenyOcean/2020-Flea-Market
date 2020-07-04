@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 function Goods({name, image, path, clName=""}) {
   return (
@@ -26,6 +26,7 @@ const GoodsDiv = styled.div`
     img{
       width: 270px;
       height: 250px;
+      object-fit: cover;
     }
   }
 
@@ -38,6 +39,14 @@ const GoodsDiv = styled.div`
     font-family: Roboto-Regular, sans-serif;
     padding: 0.5rem 0rem;
   }
+
+  ${props => props.className === 'all-items' && css`
+    a{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  `}
 `
 
 export default Goods;

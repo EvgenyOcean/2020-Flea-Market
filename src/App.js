@@ -6,6 +6,8 @@ import Item from './pages/Item';
 import Cart from './pages/Cart';
 import ErrorPage from './pages/ErrorPage';
 import Header from './components/Header';
+import Search from './pages/Search';
+import Category from './pages/Category';
 
 
 function App() {
@@ -14,9 +16,11 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Home}/>
+        <Route exact path="/cart" component={Cart}/>
         <Route exact path="/about" component={AboutUs}/>
         <Route exact path="/item/:path" component={Item}/>
-        <Route exact path="/cart" component={Cart}/>
+        <Route exact path="/search/:search" component={Search}/>
+        <Route exact path="/category/:category" component={Category}/>
         <Route component={ErrorPage}/>
       </Switch>
     </>

@@ -47,7 +47,7 @@ function Item(props) {
         </div>
 
         <div className="same-seller">
-          <Partition title={theItem.seller.username + ' also offers'} link="/"/>
+          <Partition title={theItem.seller.username + ' also offers'} />
           <GoodsSlider seller={theItem.seller}/>
         </div>
       </div> 
@@ -84,6 +84,7 @@ const ItemDiv = styled.div`
       max-width: 380px;
       width: 100%;
       height: 380px;
+      object-fit: cover;
     }
 
     button{

@@ -42,6 +42,8 @@ const StyledHeader = styled.header`
     font-family: 'JosefinSans-Bold', sans-serif;
     font-size: 1.5rem; 
     text-transform: capitalize;
+    padding: 0;
+    margin: 0;
   }
 
   .search{
@@ -65,6 +67,7 @@ const StyledHeader = styled.header`
     svg{
       color: red;
       font-size: 1rem;
+      vertical-align: bottom;
     }
   }
 

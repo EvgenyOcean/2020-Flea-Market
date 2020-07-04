@@ -11,6 +11,27 @@ const StyledCarouselDiv = styled.div`
   .slider{
     overflow: hidden;
     position: relative;
+
+    .text{
+      position: absolute; 
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); 
+      background-color: rgba(0,0,0,0.3); 
+      padding: 1rem 5rem;
+      z-index: 999;
+      text-transform: uppercase;
+      font-size: 2rem;
+      text-align: center;
+
+      @media (max-width: 600px){
+        width: 100%;
+        top: 0; 
+        transform: translateY(0) translateX(-50%);
+        font-size: 1.5rem;
+        padding: 0.3rem 1rem;
+      }
+    }
   }
 
   .slides{
@@ -23,6 +44,7 @@ const StyledCarouselDiv = styled.div`
     width: 100%;
     height: 100%; 
     object-fit: cover;
+    object-position: top;
     left: 0;
     top: 0;
   }

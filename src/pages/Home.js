@@ -19,11 +19,11 @@ function Home(props) {
       </Subheader>
       <Carousel />
       <MainContainer>
-        <Partition title="Clothes" link="clothes"/>
+        <Partition title="Clothes" link="/category/clothes"/>
         <GoodsSlider category="clothes"/>
-        <Partition title="Services" link="services"/>
+        <Partition title="Services" link="/category/services"/>
         <GoodsSlider category="services"/>
-        <Partition title="Animals" link="animals"/>
+        <Partition title="Animals" link="/category/animals"/>
         <GoodsSlider category="animals"/>
       </MainContainer>
       <Footer />
